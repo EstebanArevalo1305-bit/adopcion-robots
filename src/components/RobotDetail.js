@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FormattedMessage } from 'react-intl';
 import './RobotDetail.css';
 
 export default function RobotDetail({ robot }) {
@@ -8,7 +7,7 @@ export default function RobotDetail({ robot }) {
   if (!robot) {
     return (
       <div className="text-muted small">
-        <FormattedMessage id="sin_robot" />
+        Selecciona un robot para ver los detalles.
       </div>
     );
   }
@@ -28,18 +27,18 @@ export default function RobotDetail({ robot }) {
         style={{ maxHeight: '180px', objectFit: 'contain' }}
       />
       <ul className="list-unstyled small">
-        <li><strong><FormattedMessage id="detalle_anio" />:</strong> {robot.añoFabricacion}</li>
-        <li><strong><FormattedMessage id="detalle_proc" />:</strong> {robot.capacidadProcesamiento}</li>
-        <li><strong><FormattedMessage id="detalle_desc" />:</strong> {robot.humor}</li>
+        <li><strong>Año de fabricación:</strong> {robot.añoFabricacion}</li>
+        <li><strong>Capacidad de procesamiento:</strong> {robot.capacidadProcesamiento}</li>
+        <li><strong>Características adicionales:</strong> {robot.humor}</li>
       </ul>
 
       <div className="text-center mt-3">
         <button className="btn btn-success" onClick={handleAdoptar}>
-          <FormattedMessage id="adoptar" />
+          Adoptar 🤖
         </button>
         {adoptado && (
           <div className="alert alert-success mt-3 p-2">
-            <FormattedMessage id="adopcion_exito" values={{ name: robot.nombre }} />
+            ¡Has adoptado a <strong>{robot.nombre}</strong> con éxito! 🎉
           </div>
         )}
       </div>

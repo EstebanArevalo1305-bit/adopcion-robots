@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import './RobotList.css';
 
 export default function RobotList({ robots, onSelect }) {
@@ -11,9 +10,9 @@ export default function RobotList({ robots, onSelect }) {
         <thead>
           <tr>
             <th>ID</th>
-            <th><FormattedMessage id="table_nombre" /></th>
-            <th><FormattedMessage id="table_modelo" /></th>
-            <th><FormattedMessage id="table_empresa" /></th>
+            <th>Nombre</th>
+            <th>Modelo</th>
+            <th>Empresa Fabricante</th>
           </tr>
         </thead>
         <tbody>

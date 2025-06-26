@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import RobotList from './RobotList';
 import RobotDetail from './RobotDetail';
 import banner from '../assets/banner.PNG';
@@ -19,6 +19,7 @@ export default function RobotPage() {
 
   return (
     <div className="container my-4">
+      {/* Banner centrado */}
       <div className="text-center mb-4">
         <img
           src={banner}
@@ -32,11 +33,12 @@ export default function RobotPage() {
             objectFit: 'cover',
           }}
         />
-        <h2 className="fw-bold mt-3 text-primary"> Adopta un Robot con Robot Lovers!</h2>
+        <h2 className="fw-bold mt-3 text-primary"> Adopta un Robot con Robot Lovers! </h2>
       </div>
 
+      
       <div className="row gx-4">
-        <div className="col-md-7">
+        <div className="col-md-7 mb-4">
           <RobotList robots={robots} onSelect={setSelectedRobot} />
         </div>
         <div className="col-md-5">
